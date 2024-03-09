@@ -1,56 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'montserrat', sans-serif;
+}
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
+  background:  #EEE;
+  color: #313154;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
   .container {
-    max-width: 600px;
-    margin: 20px auto;
-  }
-  
-  h1 {
-    text-align: center;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-  }
-  
-  input[type="text"],
-  input[type="radio"] {
-    margin-bottom: 10px;
-    padding: 5px;
-  }
-  
-  button {
-    padding: 8px 15px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #45a049;
-  }
-  
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  li {
-    margin-bottom: 5px;
-  }
-  
-  .business {
-    color: #4CAF50;
-  }
-  
-  .personal {
-    color: #2196F3;
-  }
-  
+    height: 400px;
+    width: 600px;
+}
+}
+
+.task {
+  margin-bottom: 10px;
+}
+
+.task.completed span {
+  text-decoration: line-through;
+}
+#personal{
+
+}
+.greeting .title {
+  display: flex;
+}
+.greeting .title input {
+  margin-left: 0.5rem;
+  flex: 1 1 0%;
+  min-width: 0;
+  border: none;
+}
+.greeting .title, 
+.greeting .title input {
+  color: #313154;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+#btnSave{
+  background-color: red;
+}
+h3 {
+  color: #313154;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+h4 {
+  color: #888;
+  font-style: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.create_task{
+
+}
+section{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}

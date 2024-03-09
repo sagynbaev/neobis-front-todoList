@@ -5,20 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h1>Task Manager</h1>
-        <form id="taskForm">
-          <input type="text" id="taskName" placeholder="Task Name" required>
-          <label for="business">Business</label>
-          <input type="radio" id="business" name="category" value="business" required>
-          <label for="personal">Personal</label>
-          <input type="radio" id="personal" name="category" value="personal" required>
-          <button type="submit">Add Task</button>
-        </form>
-        <ul id="taskList"></ul>
-      </div>
-    <script src="./script.js"></script>
+  <div class="container">
+    <section class="greeting">
+      <h2 class="title">
+          What's up, <input type="text" id="name"  placeholder="Name here">
+      </h2>
+     </section>
+     <section class="create_task">
+     <h3>CREATE A TODO</h3>
+     <h2>What's on your</h2>
+     <h4>What's on your todo list?</h4>
+     <div><input type="text" name="content" id="taskName" placeholder="e.g. get a milk"></div>
+     <label for="business">
+       <input type="radio" id="business" name="category" value="Business">
+Business</label>
+<label for="personal"> <input type="radio" id="personal" name="category" value="Personal">
+    Personal</label>
+    <div><button onclick="addTask()">Add Todo</button></div>
+  </section>
+    <div id="tasks"></div>
+</div>
+      <script src="./script.js"></script>
 </body>
 </html>
