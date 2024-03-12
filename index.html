@@ -18,15 +18,18 @@
      </section>
      <section class="create_task">
      <h3>CREATE A TODO</h3>
-     <h2>What's on your</h2>
      <h4>What's on your todo list?</h4>
-     <div><input type="text" name="content" id="taskName" placeholder="e.g. get a milk"></div>
-     <label for="business">
+     <div>
+      <input type="text" name="content" id="taskName" placeholder="e.g. get a milk">
+    </div>
+    <h4>Pick a category</h4>
+    <div style="display: flex;justify-content:space-between;margin-bottom: 1.5rem;">
+     <label id="label_business" for="business">
        <input type="radio" id="business" name="category" value="Business">
 Business</label>
-<label for="personal"> <input type="radio" id="personal" name="category" value="Personal">
-    Personal</label>
-    <div><button onclick="addTask()">Add Todo</button></div>
+<label id="label_personal" for="personal"> <input type="radio" id="personal" name="category" value="Personal">
+    Personal</label></div>
+    <div><button id="addTodo" onclick="addTask()">Add Todo</button></div>
   </section>
     <div id="tasks"></div>
 </div>

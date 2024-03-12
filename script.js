@@ -16,28 +16,34 @@ function renderTasks() {
     tasks.forEach((task, index) => {
         const taskElement = document.createElement("div");
         taskElement.classList.add("task");
+        taskElement.id = "task"
         if (task.completed) {
             taskElement.classList.add("completed");
         }
         const checkbox = document.createElement("input");
-        checkbox.type = "checkbox";
+        checkbox.id = "checkbox_result"
+        checkbox.type = "radio";
         checkbox.checked = task.completed;
         checkbox.addEventListener("change", () => toggleTaskCompletion(index));
         const taskName = document.createElement("span");
+        taskName.id = "spanTaskName"
         taskName.textContent = task.name;
         const editInput = document.createElement("input");
+        editInput.id = "editInput"
         editInput.type = "text";
         editInput.value = task.name;
         editInput.style.display = "none"; // initially hide input
         const editButton = document.createElement("button");
+        editButton.id = "editBtn"
         editButton.textContent = "Edit";
         editButton.addEventListener("click", () => toggleEditTask(index));
         const saveButton = document.createElement("button");
         saveButton.id = 'btnSave'
-        saveButton.textContent = "edit";
+        saveButton.textContent = "Edit";
         saveButton.style.display = "none"; // initially hide button
         saveButton.addEventListener("click", () => saveEditedTask(index, editInput));
         const deleteButton = document.createElement("button");
+        deleteButton.id = "deleteBtn"
         deleteButton.textContent = "Delete";
         deleteButton.addEventListener("click", () => deleteTask(index));
         
